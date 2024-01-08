@@ -1,6 +1,6 @@
 "use strict";
 var currentLocation = new XMLHttpRequest();
-const baseURL = 'http://api.weatherapi.com/v1/forecast.json';
+const baseURL = 'https://api.weatherapi.com/v1/forecast.json';
 const API_Key = '?key=16b2f00309554f6fbab00424240401';
 const daysNumber = '&days=7';
 var latitude = '';
