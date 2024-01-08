@@ -1,0 +1,124 @@
+:root {
+    --mainColor: #1E202B;
+    --sideHeaderBackground: #2D303D;
+    --sideBodyBackground: #323544;
+    --centerBodyBackground: #262936;
+    --centerHeaderBackground: #222530;
+    --cardColor: RGB(191, 193, 200);
+    --cardWeatherWord: RGB(0, 154, 216);
+    --fontFamily: Roboto, "Open Sans", sans-serif;
+}
+
+header nav {
+    background-color: var(--mainColor);
+}
+
+header nav .navbar-brand h1 {
+    font-family: var(--fontFamily);
+    font-size: 28px;
+    color: #fff;
+    font-weight: 700;
+}
+
+header nav .navbar-brand .navbar-logo img {
+    width: 64px;
+}
+
+#mainSection {
+    background-image: url('../images/banner.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+#mainSection .searchInput input.form-control,
+#mainSection .searchInput input:focus,
+#mainSection .searchInput input.form-control::placeholder {
+    background-color: #1e202b;
+    color: #fff;
+    outline: unset;
+    border: unset;
+    padding: 15px;
+    border-radius: 30px;
+    text-align: start;
+    box-shadow: unset;
+}
+
+#mainSection .searchInput input.searchBtn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    padding: 0 40px;
+    background-color: #009ad8;
+    border-radius: 30px;
+    color: white;
+    cursor: pointer;
+    outline: unset;
+    border: unset;
+    box-shadow: unset;
+}
+
+#mainSection .weatherInfo .card {
+    min-height: 350px;
+}
+
+#mainSection .weatherInfo .card .card-header.sideHeader {
+    background-color: var(--sideHeaderBackground);
+}
+
+#mainSection .weatherInfo .card .card-header.centerHeader {
+    background-color: var(--centerHeaderBackground);
+}
+
+#mainSection .weatherInfo .card .card-body.centerBody {
+    background-color: var(--centerBodyBackground);
+}
+
+#mainSection .weatherInfo .card .card-body.sideBody {
+    background-color: var(--sideBodyBackground);
+}
+
+#mainSection .weatherInfo .card .card-header {
+    color: var(--cardColor);
+    font-size: 14px;
+    font-weight: 400;
+    font-family: var(--fontFamily);
+}
+
+#mainSection .weatherInfo .card .card-body {
+    color: var(--cardColor);
+    font-size: 14px;
+    font-weight: 400;
+    font-family: var(--fontFamily);
+}
+
+#mainSection .weatherInfo .card .card-body .locationName {
+    font-size: 18px !important;
+}
+
+#mainSection .weatherInfo .card .card-body .degree .num {
+    font-size: 6rem;
+    font-weight: 700;
+    color: #fff;
+    font-family: var(--fontFamily);
+}
+
+#mainSection .weatherInfo .card .card-body .describeWord {
+    color: rgb(0, 154, 216);
+}
+
+#mainSection .weatherInfo .card .card-body .degreeNum .highest {
+    font-size: 1.71429em;
+    color: #fff;
+    font-weight: 700;
+}
+
+footer {
+    background-color: #262936;
+    color: #bfc1c8;
+}

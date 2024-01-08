@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Kero Edward">
+    <meta name="keywords" content="weather, celsius, sunny, partly cloud">
+    <meta name="description"
+        content="Weather system that display the weather for three days start from today depend on your location, then you can search for any city else.">
+    <link rel="shortcut icon" href="./assets/images/icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <title>Weather System</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg py-5">
+            <div class="container">
+                <a class="navbar-brand text-capitalize d-flex align-items-center gap-3" href="#">
+                    <div class="navbar-logo">
+                        <img src="./assets/images/logo.png" alt="weather system logo">
+                    </div>
+                    <h1 class="m-0">weather system</h1>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <section id="mainSection" class="py-5">
+        <div class="m-auto w-75 py-5">
+            <div class="searchInput position-relative">
+                <input class="form-control searchInputBar" type="text" placeholder="Find your location..."
+                    aria-label="default input example">
+                <input class="searchBtn" type="button" value="Search" id="submit" onclick="searchWeather()">
+            </div>
+            <div class="weatherInfo my-5">
+                <div class="row">
+                    <div class="col-md-4 p-0">
+                        <div class="card border-0 rounded-3 bg-transparent firstDay">
+                            <div
+                                class="card-header border-0 rounded-top-3 rounded-end-0 sideHeader text-capitalize d-flex justify-content-between align-items-center">
+                                <p id="day" class="m-0">day</p>
+                                <p id="date" class="m-0">date</p>
+                            </div>
+                            <div class="card-body sideBody p-4" style="border-bottom-left-radius: 0.5rem;">
+                                <h5 class="card-title locationName text-capitalize mt-3">giza</h5>
+                                <div class="degree d-flex justify-content-between align-items-center">
+                                    <div class="num">
+                                        <span>22</span><sup>o</sup>C
+                                    </div>
+                                    <div class="icon">
+                                        <i class="fa-solid fa-sun" style="font-size: 2rem;"></i>
+                                    </div>
+                                </div>
+                                <div class="describeWord text-capitalize">sunny</div>
+                                <div class="info d-flex gap-5 mt-4 mb-2">
+                                    <!-- <div class="hotness">
+                                        <i class="fa-solid fa-umbrella"></i>
+                                        <span>20%</span>
+                                    </div> -->
+
+                                    <div class="windSpeed">
+                                        <i class="fa-solid fa-wind"></i>
+                                        <span>18</span>
+                                        km/h
+                                    </div>
+
+                                    <div class="windDirection">
+                                        <i class="fa-regular fa-compass"></i>
+                                        <span>East</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 p-0">
+                        <div class="card border-0 bg-transparent secondDay">
+                            <div
+                                class="card-header border-0 rounded-0 centerHeader text-capitalize text-center">
+                                <p id="day" class="m-0">day</p>
+                            </div>
+                            <div class="card-body centerBody p-4 d-flex flex-column justify-content-center align-items-center">
+                                <div class="degree d-flex flex-column justify-content-between align-items-center">
+                                    <div class="icon">
+                                        <i class="fa-solid fa-sun" style="font-size: 1.5rem;"></i>
+                                    </div>
+                                    <div class="degreeNum mt-4">
+                                        <div class="highest">
+                                            <span>22</span><sup>o</sup>C
+                                        </div>
+                                        <div class="smallest text-center">
+                                            <span>22</span><sup>o</sup>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="describeWord text-capitalize mt-3">sunny</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 p-0">
+                        <div class="card border-0 bg-transparent thirdDay">
+                            <div
+                                class="card-header border-0 rounded-top-3 rounded-start-0 sideHeader text-capitalize text-center">
+                                <p id="day" class="m-0">day</p>
+                            </div>
+                            <div class="card-body sideBody p-4 d-flex flex-column justify-content-center align-items-center" style="border-bottom-right-radius: 0.5rem;">
+                                <div class="degree d-flex flex-column justify-content-between align-items-center">
+                                    <div class="icon">
+                                        <i class="fa-solid fa-sun" style="font-size: 1.5rem;"></i>
+                                    </div>
+                                    <div class="degreeNum mt-4">
+                                        <div class="highest">
+                                            <span>22</span><sup>o</sup>C
+                                        </div>
+                                        <div class="smallest text-center">
+                                            <span>22</span><sup>o</sup>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="describeWord text-capitalize mt-3">sunny</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center py-5">
+        <div>
+            <img src="./assets/images/logo.png" width="80" alt="weather system logo">
+        </div>
+        <p class="mt-3">Copyright &copy;2024 Kero. All rights reserved</p>
+    </footer>
+
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
